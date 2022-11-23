@@ -36,7 +36,8 @@ export const createUser = async(req, res) =>{
             password: hashPassword,
             role: role
         });
-        res.status(201).json({msg: "Register Berhasil"});
+        //res.status(201).json({msg: "Register Berhasil"});
+        res.status(200).json({ msg: "Register Berhasil", user: {name, role }})
     } catch (error) {
         res.status(400).json({msg: error.message});
     }
