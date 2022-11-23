@@ -1,0 +1,51 @@
+// Create a user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "lisa",
+    //"email": "admin@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "user"
+}
+
+###
+// get All Users
+GET http://localhost:5000/users
+
+###
+// get Single User
+GET http://localhost:5000/users/abbcfb5b-5bc1-4008-86ef-35ff8d9298b3
+
+###
+// Update a user
+PATCH http://localhost:5000/users/abbcfb5b-5bc1-4008-86ef-35ff8d9298b3
+Content-Type: application/json
+
+{
+    "name": "Pia Update",
+    "password": "",
+    "confPassword": "",
+    "role": "user"
+}
+
+###
+// Delete a user
+DELETE http://localhost:5000/users/abbcfb5b-5bc1-4008-86ef-35ff8d9298b3
+
+###
+// Login User
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "name": "Afi",
+    "password": "123456"
+} 
+
+###
+GET http://localhost:5000/me
+
+###
+DELETE http://localhost:5000/logout
